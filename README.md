@@ -2,16 +2,16 @@
 
 This mod _improves_ combat by eliminating interruptions to you and your mount.
 
-:: REQUIREMENTS Template ::
+:: REQUIREMENTS ::
 
 NONE
 
-:: FEATURES Template::
+:: FEATURES ::
 * Shrug off every blow.
 * Your mount shrugs off every blow.
 * You block enemy knockbacks.
 
-:: GENERAL OTHER STUFF Template::
+:: GENERAL OTHER STUFF ::
 * This modifies the code with a harmony patch.
 * The xml file with managed parameters for mount rear threshold and attack interrupt threshold didn't seem to do anything.
 
