@@ -112,10 +112,11 @@ namespace DontInterruptMe
       Debug.Print("blow.BlowFlag: " + blow.BlowFlag);
       FileLog.Log("blow.BlowFlag: " + blow.BlowFlag);
 
-      if (victimAgent.IsMainAgent || victimAgent.IsMount && victimAgent.IsMine)
+      if (victimAgent.IsMainAgent || (victimAgent.IsMount && victimAgent.IsMine))
       {
         Debug.Print("You've shrugged off the blow. " + collisionData.DamageType + " " + collisionData.BaseMagnitude);
         FileLog.Log("You've shrugged off the blow. " + collisionData.DamageType + " " + collisionData.BaseMagnitude);
+        blow.BlowFlag |= BlowFlags.ShrugOff;
         __result = true;
       }
 

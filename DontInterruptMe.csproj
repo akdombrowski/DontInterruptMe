@@ -72,6 +72,7 @@
     <Compile Include="SubModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="LICENSE" />
+    <Content Include="README.txt" />
     <None Include="README.md" />
     <Content Include="SubModule.xml" />
   </ItemGroup>
