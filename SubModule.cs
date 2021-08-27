@@ -17,12 +17,12 @@ namespace DontInterruptMe
         [HarmonyPostfix]
         [HarmonyPatch(typeof(Mission), "DecideAgentKnockedByBlow")]
         public static void DecideAgentKnockedByBlow(
-          Agent attacker,
-          Agent victim,
-          in AttackCollisionData collisionData,
-          WeaponComponentData attackerWeapon,
-          bool isInitialBlowShrugOff,
-          ref Blow blow)
+            Agent attacker,
+            Agent victim,
+            in AttackCollisionData collisionData,
+            WeaponComponentData attackerWeapon,
+            bool isInitialBlowShrugOff,
+            ref Blow blow)
         {
 
             if (victim.IsMainAgent)
@@ -56,12 +56,12 @@ namespace DontInterruptMe
         [HarmonyPostfix]
         [HarmonyPatch(typeof(Mission), "DecideMountRearedByBlow")]
         public static void DecideMountRearedByBlow(Agent attackerAgent,
-        Agent victimAgent,
-        in AttackCollisionData collisionData,
-        WeaponComponentData attackerWeapon,
-        float rearDamageThresholdMultiplier,
-        Vec3 blowDirection,
-        ref Blow blow)
+            Agent victimAgent,
+            in AttackCollisionData collisionData,
+            WeaponComponentData attackerWeapon,
+            float rearDamageThresholdMultiplier,
+            Vec3 blowDirection,
+            ref Blow blow)
         {
 
             if (victimAgent.IsMount)
@@ -94,8 +94,8 @@ namespace DontInterruptMe
         [HarmonyPostfix]
         [HarmonyPatch(typeof(Mission), "DecideAgentShrugOffBlow")]
         protected static void DecideAgentShrugOffBlow(Agent victimAgent,
-          AttackCollisionData collisionData,
-          ref Blow blow, ref bool __result)
+            AttackCollisionData collisionData,
+            ref Blow blow, ref bool __result)
         {
 
             if (victimAgent.IsMainAgent || (victimAgent.IsMount && victimAgent.IsMine))
@@ -127,14 +127,14 @@ namespace DontInterruptMe
         [HarmonyPostfix]
         [HarmonyPatch(typeof(Mission), "DecideWeaponCollisionReaction")]
         protected static void DecideWeaponCollisionReaction(
-      Blow registeredBlow,
-      in AttackCollisionData collisionData,
-      Agent attacker,
-      Agent defender,
-      in MissionWeapon attackerWeapon,
-      bool isFatalHit,
-      bool isShruggedOff,
-      out MeleeCollisionReaction colReaction, Mission __instance)
+          Blow registeredBlow,
+          in AttackCollisionData collisionData,
+          Agent attacker,
+          Agent defender,
+          in MissionWeapon attackerWeapon,
+          bool isFatalHit,
+          bool isShruggedOff,
+          out MeleeCollisionReaction colReaction, Mission __instance)
         {
 
             // original code
