@@ -29,24 +29,31 @@ namespace DontInterruptMe
             {
                 Harmony.DEBUG = debug;
                 List<string> buffer = FileLog.GetBuffer(true);
-                buffer.Add("");
-                buffer.Add("");
 
-                buffer.Add("DecideAgentKnockedByBlow ");
-                buffer.Add("victimAgent.IsMainAgent: " + victim.IsMainAgent);
-                buffer.Add("isInitialBlowShrugOff: " + isInitialBlowShrugOff);
-                buffer.Add("blow.BlowFlag: " + blow.BlowFlag);
+                if (Harmony.DEBUG)
+                {
+                    buffer.Add("");
+                    buffer.Add("");
 
-                buffer.Add("You blocked the knockback. " + collisionData.DamageType + " " + collisionData.BaseMagnitude);
+                    buffer.Add("DecideAgentKnockedByBlow ");
+                    buffer.Add("victimAgent.IsMainAgent: " + victim.IsMainAgent);
+                    buffer.Add("isInitialBlowShrugOff: " + isInitialBlowShrugOff);
+                    buffer.Add("blow.BlowFlag: " + blow.BlowFlag);
+
+                    buffer.Add("You blocked the knockback. " + collisionData.DamageType + " " + collisionData.BaseMagnitude);
+                }
 
                 blow.BlowFlag &= ~BlowFlags.KnockBack;
                 blow.BlowFlag &= ~BlowFlags.KnockDown;
 
-                buffer.Add("blow.BlowFlag: " + blow.BlowFlag);
+                if (Harmony.DEBUG)
+                {
+                    buffer.Add("blow.BlowFlag: " + blow.BlowFlag);
 
 
-                FileLog.LogBuffered(buffer);
-                FileLog.FlushBuffer();
+                    FileLog.LogBuffered(buffer);
+                    FileLog.FlushBuffer();
+                }
 
                 Harmony.DEBUG = false;
             }
@@ -70,21 +77,28 @@ namespace DontInterruptMe
 
                 List<string> buffer = FileLog.GetBuffer(true);
 
-                buffer.Add("");
-                buffer.Add("");
-                buffer.Add("DecideMountRearedByBlow");
-                buffer.Add("blow.BlowFlag: " + blow.BlowFlag);
+                if (Harmony.DEBUG)
+                {
+                    buffer.Add("");
+                    buffer.Add("");
+                    buffer.Add("DecideMountRearedByBlow");
+                    buffer.Add("blow.BlowFlag: " + blow.BlowFlag);
 
-                buffer.Add("Your mount has shrugged off the blow. " + collisionData.DamageType + " " + collisionData.BaseMagnitude);
+                    buffer.Add("Your mount has shrugged off the blow. " + collisionData.DamageType + " " + collisionData.BaseMagnitude);
+                }
+
                 // cancel the BlowFlag if there is one
                 blow.BlowFlag &= ~BlowFlags.MakesRear;
 
-                buffer.Add("blow.BlowFlag: " + blow.BlowFlag);
-                buffer.Add("");
-                buffer.Add("");
+                if (Harmony.DEBUG)
+                {
+                    buffer.Add("blow.BlowFlag: " + blow.BlowFlag);
+                    buffer.Add("");
+                    buffer.Add("");
 
-                FileLog.LogBuffered(buffer);
-                FileLog.FlushBuffer();
+                    FileLog.LogBuffered(buffer);
+                    FileLog.FlushBuffer();
+                }
 
                 Harmony.DEBUG = false;
             }
@@ -103,22 +117,30 @@ namespace DontInterruptMe
                 Harmony.DEBUG = debug;
                 List<string> buffer = FileLog.GetBuffer(true);
 
-                buffer.Add("");
-                buffer.Add("");
-                buffer.Add("DecideAgentShrugOffBlow ");
-                buffer.Add("victimAgent.IsMainAgent: " + victimAgent.IsMainAgent);
-                buffer.Add("victimAgent.IsMount: " + victimAgent.IsMount);
-                buffer.Add("victimAgent.IsMine: " + victimAgent.IsMine);
-                buffer.Add("blow.BlowFlag: " + blow.BlowFlag);
-
-                buffer.Add("You've shrugged off the blow. " + collisionData.DamageType + " " + collisionData.BaseMagnitude);
+                if (Harmony.DEBUG)
+                {
+                    buffer.Add("");
+                    buffer.Add("");
+                    buffer.Add("DecideAgentShrugOffBlow ");
+                    buffer.Add("victimAgent.IsMainAgent: " + victimAgent.IsMainAgent);
+                    buffer.Add("victimAgent.IsMount: " + victimAgent.IsMount);
+                    buffer.Add("victimAgent.IsMine: " + victimAgent.IsMine);
+                    buffer.Add("blow.BlowFlag: " + blow.BlowFlag);
+                }
 
                 blow.BlowFlag |= BlowFlags.ShrugOff;
 
+                if (Harmony.DEBUG)
+                {
+                    buffer.Add("You've shrugged off the blow. " + collisionData.DamageType + " " + collisionData.BaseMagnitude);
+                    FileLog.LogBuffered(buffer);
+                    FileLog.FlushBuffer();
+                }
+
+
                 __result = true;
 
-                FileLog.LogBuffered(buffer);
-                FileLog.FlushBuffer();
+
                 Harmony.DEBUG = false;
             }
 
@@ -164,17 +186,26 @@ namespace DontInterruptMe
 
                 List<string> buffer = FileLog.GetBuffer(true);
 
-                buffer.Add("");
-                buffer.Add("");
-                buffer.Add("DecideWeaponCollisionReaction");
-                buffer.Add("defender: " + defender.Name);
-                buffer.Add("Collision Reaction: cancel stagger");
+                if (Harmony.DEBUG)
+                {
+                    buffer.Add("");
+                    buffer.Add("");
+                    buffer.Add("DecideWeaponCollisionReaction");
+                    buffer.Add("defender: " + defender.Name);
+                    buffer.Add("Collision Reaction: cancel stagger");
+                }
+
                 colReaction = MeleeCollisionReaction.Bounced;
-                buffer.Add("colReaction: " + colReaction);
-                buffer.Add("");
-                buffer.Add("");
-                FileLog.LogBuffered(buffer);
-                FileLog.FlushBuffer();
+
+                if (Harmony.DEBUG)
+                {
+                    buffer.Add("colReaction: " + colReaction);
+                    buffer.Add("");
+                    buffer.Add("");
+                    FileLog.LogBuffered(buffer);
+                    FileLog.FlushBuffer();
+                }
+
                 Harmony.DEBUG = false;
             }
 
