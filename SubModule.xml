@@ -1,25 +1,26 @@
 ﻿<Module>
-  <Name value="DontInterruptMe" />
-  <Id value="DontInterruptMe" />
-  <Version value="v1.0.4" />
-  <SingleplayerModule value="true" />
-  <MultiplayerModule value="false" />
-  <DependedModules>
-    <DependedModule Id="Native" DependentVersion="e1.6.1" />
-    <DependedModule Id="SandBoxCore" DependentVersion="e1.6.1" />
-    <DependedModule Id="Sandbox" DependentVersion="e1.6.1" />
-    <DependedModule Id="StoryMode" DependentVersion="e1.6.1" />
-  </DependedModules>
-  <SubModules>
-    <SubModule>
-      <Name value="DontInterruptMe" />
-      <DLLName value="DontInterruptMe.dll" />
-      <SubModuleClassType value="DontInterruptMe.SubModule" />
-      <Tags>
-        <Tag key="DedicatedServerType" value="none" />
-        <Tag key="IsNoRenderModeElement" value="false" />
-      </Tags>
-    </SubModule>
-  </SubModules>
-  <Xmls />
+    <Name value="DontInterruptMe" />
+    <Id value="DontInterruptMe" />
+    <Version value="v1.0.4" />
+    <SingleplayerModule value="true" />
+    <MultiplayerModule value="false" />
+    <DependedModules
+        <DependedModule Id="Bannerlord.Harmony" />
+        <DependedModule Id="Native" DependentVersion="e1.6.1" />
+        <DependedModule Id="SandBoxCore" DependentVersion="e1.6.1" />
+        <DependedModule Id="Sandbox" DependentVersion="e1.6.1" />
+        <DependedModule Id="StoryMode" DependentVersion="e1.6.1" />
+    </DependedModules>
+    <SubModules>
+        <SubModule>
+            <Name value="DontInterruptMe" />
+            <DLLName value="DontInterruptMe.dll" />
+            <SubModuleClassType value="DontInterruptMe.SubModule" />
+            <Tags>
+                <Tag key="DedicatedServerType" value="none" />
+                <Tag key="IsNoRenderModeElement" value="false" />
+            </Tags>
+        </SubModule>
+    </SubModules>
+    <Xmls />
 </Module>
