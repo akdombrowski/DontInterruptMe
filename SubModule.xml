@@ -1,15 +1,15 @@
 ﻿<Module>
     <Name value="DontInterruptMe" />
     <Id value="DontInterruptMe" />
-    <Version value="v1.0.4" />
+    <Version value="v1.0.5" />
     <SingleplayerModule value="true" />
     <MultiplayerModule value="false" />
     <DependedModules>
         <DependedModule Id="Bannerlord.Harmony" />
-        <DependedModule Id="Native" DependentVersion="e1.6.2" />
-        <DependedModule Id="SandBoxCore" DependentVersion="e1.6.2" />
-        <DependedModule Id="Sandbox" DependentVersion="e1.6.2" />
-        <DependedModule Id="StoryMode" DependentVersion="e1.6.2" />
+        <DependedModule Id="Native" DependentVersion="e1.6.3" />
+        <DependedModule Id="SandBoxCore" DependentVersion="e1.6.3" />
+        <DependedModule Id="Sandbox" DependentVersion="e1.6.3" />
+        <DependedModule Id="StoryMode" DependentVersion="e1.6.3" />
     </DependedModules>
     <SubModules>
         <SubModule>
