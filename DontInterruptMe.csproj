@@ -42,8 +42,8 @@
   </PropertyGroup>
   <!-- Bannerlord Native Assemblies -->
   <ItemGroup>
-    <Reference Include="0Harmony, Version=2.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Lib.Harmony.2.1.1\lib\net48\0Harmony.dll</HintPath>
+    <Reference Include="0Harmony, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Lib.Harmony.2.2.0\lib\net48\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="D:\SteamLibrary\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds*.dll">
       <HintPath>%(Identity)</HintPath>
@@ -73,11 +73,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="LICENSE" />
     <Content Include="README.txt" />
+    <None Include="packages.config" />
     <None Include="README.md" />
     <Content Include="SubModule.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <!-- Post-Build -->
   <PropertyGroup>
