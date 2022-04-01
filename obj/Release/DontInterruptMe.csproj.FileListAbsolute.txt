@@ -1,0 +1,7 @@
+D:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\DontInterruptMe\bin\Win64_Shipping_Client\DontInterruptMe.dll
+D:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\DontInterruptMe\bin\Win64_Shipping_Client\DontInterruptMe.pdb
+D:\Github\DontInterruptMe\obj\Release\DontInterruptMe.csproj.AssemblyReference.cache
+D:\Github\DontInterruptMe\obj\Release\DontInterruptMe.csproj.CoreCompileInputs.cache
+D:\Github\DontInterruptMe\obj\Release\DontInterruptMe.csproj.CopyComplete
+D:\Github\DontInterruptMe\obj\Release\DontInterruptMe.dll
+D:\Github\DontInterruptMe\obj\Release\DontInterruptMe.pdb
