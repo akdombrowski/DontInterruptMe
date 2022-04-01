@@ -5,3 +5,8 @@ E:\akdfl\Documents\GitHub\DontInterruptMe\DontInterruptMe\obj\Debug\DontInterrup
 E:\akdfl\Documents\GitHub\DontInterruptMe\DontInterruptMe\obj\Debug\DontInterruptMe.csproj.CopyComplete
 E:\akdfl\Documents\GitHub\DontInterruptMe\DontInterruptMe\obj\Debug\DontInterruptMe.dll
 E:\akdfl\Documents\GitHub\DontInterruptMe\DontInterruptMe\obj\Debug\DontInterruptMe.pdb
+D:\Github\DontInterruptMe\obj\Debug\DontInterruptMe.csproj.AssemblyReference.cache
+D:\Github\DontInterruptMe\obj\Debug\DontInterruptMe.csproj.CoreCompileInputs.cache
+D:\Github\DontInterruptMe\obj\Debug\DontInterruptMe.csproj.CopyComplete
+D:\Github\DontInterruptMe\obj\Debug\DontInterruptMe.dll
+D:\Github\DontInterruptMe\obj\Debug\DontInterruptMe.pdb
